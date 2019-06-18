@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ThemeWagon" />
+    <meta name="Description" content="Rights Non-Profit Template">
+    <meta name="keywords" content="non-profit, child">
+
+    <title>Catering | Bistro</title>
+
+    <!-- favicons
+    ============================================= -->
+
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <!-- StyleSheets -->
+
+    <!-- Twitter Bootstrap -->
+    <link rel="stylesheet" href="assets/lib/bootstrap/dist/css/bootstrap.min.css">
+
+    
+    <!-- Library Stylesheets -->
+    <link rel="stylesheet" href="assets/lib/owlcarousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/lib/owlcarousel/owl-carousel/owl.theme.css">
+
+
+    <!-- Google font Stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Gabriela' rel='stylesheet' type='text/css'> -->
+
+
+    <!-- Icon Stylesheets -->
+    <link rel="stylesheet" href="assets/lib/ionicons/css/ionicons.css">
+    <link rel="stylesheet" href="assets/lib/fontawesome/css/font-awesome.min.css">
+
+
+
+
+
+
+    <!-- Custom Template Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
+ 
+<script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(53.480838,-2.243195),
+            zoom: 17,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.DEFAULT,
+            },
+            disableDoubleClickZoom: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            scaleControl: true,
+            scrollwheel: false,
+            panControl: true,
+            streetViewControl: true,
+            draggable : true,
+            overviewMapControl: true,
+            overviewMapControlOptions: {
+                opened: false,
+            },
+            mapTypeId: google.maps.MapTypeId.TERRAIN,
+            styles: [
+  {
+    "featureType": "landscape",
+    "stylers": [
+      {
+        "hue": "#F1FF00"
+      },
+      {
+        "saturation": -27.4
+      },
+      {
+        "lightness": 9.4
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "stylers": [
+      {
+        "hue": "#0099FF"
+      },
+      {
+        "saturation": -20
+      },
+      {
+        "lightness": 36.4
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "stylers": [
+      {
+        "hue": "#00FF4F"
+      },
+      {
+        "saturation": 0
+      },
+      {
+        "lightness": 0
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "stylers": [
+      {
+        "hue": "#FFB300"
+      },
+      {
+        "saturation": -38
+      },
+      {
+        "lightness": 11.2
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "stylers": [
+      {
+        "hue": "#00B6FF"
+      },
+      {
+        "saturation": 4.2
+      },
+      {
+        "lightness": -63.4
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "stylers": [
+      {
+        "hue": "#9FFF00"
+      },
+      {
+        "saturation": 0
+      },
+      {
+        "lightness": 0
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  }
+],
+        }
+        var mapElement = document.getElementById('map-canvas');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+['Bistro', 'undefined', 'undefined', 'undefined', 'undefined', 53.4807593, -2.2426305000000184, 'https://mapbuildr.com/assets/img/markers/solid-pin-red.png']
+        ];
+        for (i = 0; i < locations.length; i++) {
+      if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+      if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+      if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+            marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+            });
+link = '';     }
+
+}
+</script>
+<style>
+    .gm-style-iw * {
+        display: block;
+        width: 100%;
+    }
+    .gm-style-iw h4, .gm-style-iw p {
+        margin: 0;
+        padding: 0;
+    }
+    .gm-style-iw a {
+        color: #4272db;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- main container -->
+<div class="body-content">
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+<!-- Fixed Top Navigation -->
+<nav id="fixedTopNav" class="navbar navbar-fixed-top main-navigation" role="navigation">
+    <div class="container">
+
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="ion-drag"></span>
+            </button>
+
+            <!-- Logo -->
+            <div class="navbar-brand">
+                <span class="sr-only">Bistro</span>
+                <a href="index.html">
+                    BISTRO
+                </a>
+            </div>
+            <!-- /Logo -->
+
+        </div><!-- /.navbar-header -->
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+            <ul class="nav navbar-nav navbar-right" role="menu">
+
+                <li class="">
+                    <a href="index.html"><span>Home</span></a>
+                </li>
+
+                <li class="">
+                    <a href="menu.html"><span>Menu</span></a>
+                </li>
+
+                <li class="">
+                    <a href="gallery.html"><span>Gallery</span></a>
+                </li>
+
+                <li class="">
+                    <a href="giftcard.html"><span>Giftcard</span></a>
+                </li>
+
+                <li class="active">
+                    <a href="catering.html"><span>Catering</span></a>
+                </li>
+
+                <li class="">
+                    <a href="contact.html"><span>Contact</span></a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /Navigation Links -->
+
+    </div><!-- /.container -->
+</nav>
+<!-- /Fixed Top Navigation -->
+
+
+<header class="inner-header text-center slim-bg" style="background-image: url(assets/images/catering_header_bg.png); background-position-y: bottom;">
+    <div class="container">
+    	<h2 class=" text-center text-uppercase">
+            Our Catering
+        </h2>
+        <span> Services </span>
+    </div>
+</header>
+
+
+<!-- start: catering-intro section -->
+<section id="catering" class="catering section-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <!-- start catering-intro section -->
+                <div class="catering-intro">
+                    <div class="content-details">
+                        <p class="msg">Pricing and availability may vary by location</p>
+                        <p>BBQ &amp; Grill offers a fantastic selection of culinary items from Hand-cut and seasoned Certified Angus Beef steaks grilled over live oak fire, slow roasted and grilled to-order BBQ Chicken, Beef &amp; Pork Baby Back ribs. Our fish is always hand packed on ice; never frozen. Looking for fresh and lean cuisine? Sample our Quinoa or Kale salads. But don't worry. we don't cater to adults only; we offer most of our more popular dishes in portions for the little ones on our Kids Menu. We also feature a 'zero' trans fat-free menu.</p>
+                        <a href="#">You can review our Nutritional Information here.</a>
+                        <p>
+                            or <u>call: +44000444</u>
+                        </p>
+                        <p class="click">Click below to view a specific menu</p>
+                    </div>
+                </div>
+                <!-- end catering-intro section -->
+
+                <!-- start package section  -->
+                <div class="package-card">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title text-center">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Catering Packages</a>
+                                        </h3>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <p>
+                                                Our catering packages generally require a minimum of 30 guests. Packages may not be combined, and prices do not include optional service charges. Please call our catering team at 800.589.7427 ext. 1 or 805.719.9000 ext.1 to discuss your event's food and service needs or to place your order.
+                                            </p> 
+                                            <p class="last-desc">
+                                                Add a House or Caesar salad to any package for +1.50/person.
+                                                <br>
+                                                Premium Sides available with packages for an additional charge.
+                                            </p>
+
+                                            <div class="packages">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="package-list">
+                                                            <h4>Package 1 ($12/Person)</h4>
+                                                            <ul>
+                                                                <li>Choice of BBQ Half Chicken or BBQ Chicken Breast</li>
+                                                                <li>Choice of 2 Signature Sides</li>
+                                                                <li>Freshly Baked Garlic Rolls</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="package-list">
+                                                            <h4>Package 3 ($42/Person)</h4>
+                                                            <ul>
+                                                                <li>WR Tri Tip</li>
+                                                                <li>Choice of Ribs (Beef or Baby Back)</li>
+                                                                <li>Freshly Baked Garlic Rolls</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="package-list">
+                                                            <h4>Package 2 ($32/Person)</h4>
+                                                            <ul>
+                                                                <li>Choice of WR Tri Tip or Ribs (Beef or Baby Back)</li>
+                                                                <li>Choice of 2 Signature Sides</li>
+                                                                <li>Freshly Baked Garlic Rolls</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="package-list">
+                                                            <h4>Package 4 ($52/Person)</h4>
+                                                            <ul>
+                                                                <li>Fresh Atlantic Salmon</li>
+                                                                <li>Perfect Prime Rib</li>
+                                                                <li>Freshly Baked Garlic Rolls</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title text-center">
+                                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">BBQ Platters</a>
+                                        </h3>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title text-center">
+                                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Appetizers</a>
+                                        </h3>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <p>Duis tempus lacus convallis dolor ullamcorper, ac feugiat sapien rutrum. Cras dignissim libero a elit luctus, non tempus sem pharetra. Maecenas viverra porta ligula at vestibulum. Nam porta elit sollicitudin risus egestas, at efficitur sapien congue. Quisque mollis ligula tellus, quis suscipit erat sollicitudin vitae. Aenean vel pulvinar mauris. Vestibulum consectetur arcu et aliquam vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla elementum tempor sagittis. Nullam eu lectus accumsan, blandit tellus ut, egestas lorem. Donec convallis blandit nibh, vitae bibendum felis interdum vel. Maecenas tincidunt efficitur ultrices. Curabitur gravida efficitur egestas.</p> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title text-center">
+                                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Salads</a>
+                                        </h3>
+                                    </div>
+                                    <div id="collapseFour" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- /#accordion -->
+                        </div>
+                    </div> <!-- /.row -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+	<div class="container">
+        <div class="contact-social">
+            <div class="row">
+                <div class="col-md-6 share-buttons">
+                    <ul class="social-icons">
+                        <li><p>Follow Us</p></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 link">
+                    <a href="giftcard.html">Send Gift Card</a>
+                    <a href="contact.html">Contact with us</a>
+                </div>
+            </div>                                
+        </div>
+
+        <div class="contact-info">
+            <div class="row text-center">
+                <div class="col-md-6 col-md-offset-3">
+                    <p>18 Chalk Farm Road, Camden NW1 8AG</p>
+                    <p>shout@thebistro.co.uk</p>
+                    <p>0207 428 0998</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- start: footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <p class="text-center"> &copy; 2016 The Bistro. All Rights Reserved. </p> 
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- end: footer -->
+
+
+
+
+</div><!--/main container-->
+
+
+
+
+<!-- Javascripts  -->
+
+<script src="assets/lib/components-modernizr/modernizr.js"></script>
+<script src="assets/lib/jquery/dist/jquery.js"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="assets/lib/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
+
+
+<script src="assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
+
+
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>

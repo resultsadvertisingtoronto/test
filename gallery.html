@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ThemeWagon" />
+    <meta name="Description" content="Rights Non-Profit Template">
+    <meta name="keywords" content="non-profit, child">
+
+    <title>Gallery | New Generation Sushi</title>
+
+    <!-- favicons
+    ============================================= -->
+
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <!-- StyleSheets -->
+
+    <!-- Twitter Bootstrap -->
+    <link rel="stylesheet" href="assets/lib/bootstrap/dist/css/bootstrap.min.css">
+
+    
+    <!-- Library Stylesheets -->
+    <link rel="stylesheet" href="assets/lib/owlcarousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/lib/owlcarousel/owl-carousel/owl.theme.css">
+
+
+    <!-- Google font Stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Gabriela' rel='stylesheet' type='text/css'> -->
+
+
+    <!-- Icon Stylesheets -->
+    <link rel="stylesheet" href="assets/lib/ionicons/css/ionicons.css">
+    <link rel="stylesheet" href="assets/lib/fontawesome/css/font-awesome.min.css">
+
+
+
+
+
+
+    <!-- Custom Template Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
+ 
+<script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(53.480838,-2.243195),
+            zoom: 17,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.DEFAULT,
+            },
+            disableDoubleClickZoom: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            scaleControl: true,
+            scrollwheel: false,
+            panControl: true,
+            streetViewControl: true,
+            draggable : true,
+            overviewMapControl: true,
+            overviewMapControlOptions: {
+                opened: false,
+            },
+            mapTypeId: google.maps.MapTypeId.TERRAIN,
+            styles: [
+  {
+    "featureType": "landscape",
+    "stylers": [
+      {
+        "hue": "#F1FF00"
+      },
+      {
+        "saturation": -27.4
+      },
+      {
+        "lightness": 9.4
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "stylers": [
+      {
+        "hue": "#0099FF"
+      },
+      {
+        "saturation": -20
+      },
+      {
+        "lightness": 36.4
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "stylers": [
+      {
+        "hue": "#00FF4F"
+      },
+      {
+        "saturation": 0
+      },
+      {
+        "lightness": 0
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "stylers": [
+      {
+        "hue": "#FFB300"
+      },
+      {
+        "saturation": -38
+      },
+      {
+        "lightness": 11.2
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "stylers": [
+      {
+        "hue": "#00B6FF"
+      },
+      {
+        "saturation": 4.2
+      },
+      {
+        "lightness": -63.4
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "stylers": [
+      {
+        "hue": "#9FFF00"
+      },
+      {
+        "saturation": 0
+      },
+      {
+        "lightness": 0
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  }
+],
+        }
+        var mapElement = document.getElementById('map-canvas');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+['Bistro', 'undefined', 'undefined', 'undefined', 'undefined', 53.4807593, -2.2426305000000184, 'https://mapbuildr.com/assets/img/markers/solid-pin-red.png']
+        ];
+        for (i = 0; i < locations.length; i++) {
+      if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+      if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+      if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+            marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+            });
+link = '';     }
+
+}
+</script>
+<style>
+    .gm-style-iw * {
+        display: block;
+        width: 100%;
+    }
+    .gm-style-iw h4, .gm-style-iw p {
+        margin: 0;
+        padding: 0;
+    }
+    .gm-style-iw a {
+        color: #4272db;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- main container -->
+<!--div class="body-content">
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+<!-- Fixed Top Navigation -->
+<nav id="fixedTopNav" class="navbar navbar-fixed-top main-navigation" role="navigation">
+    <div class="container">
+
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="ion-drag"></span>
+            </button>
+
+            <!-- Logo -->
+            <div class="navbar-brand">
+                <span class="sr-only">New Generation Sushi</span>
+                <a href="index.html">
+                    New Generation Sushi
+                </a>
+            </div>
+            <!-- /Logo -->
+
+        </div><!-- /.navbar-header -->
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+            <ul class="nav navbar-nav navbar-right" role="menu">
+
+                <li class="">
+                    <a href="index.html"><span>Home</span></a>
+                </li>
+
+                <li class="">
+                    <a href="menu.html"><span>Menu</span></a>
+                </li>
+
+                <li class="active">
+                    <a href="gallery.html"><span>Gallery</span></a>
+                </li>
+
+                <li class="">
+                    <a href="giftcard.html"><span>Giftcard</span></a>
+                </li>
+
+                <li class="">
+                    <a href="contact.html"><span>Contact</span></a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /Navigation Links -->
+
+    </div><!-- /.container -->
+</nav>
+<!-- /Fixed Top Navigation -->
+
+
+<header class="inner-header text-center slim-bg" style="background-image: url(assets/images/gallery_header_bg.png); background-position-y: bottom;">
+    <div class="container">
+    	<h2 class=" text-center text-uppercase">
+            discover our
+        </h2>
+        <span> Gallery </span>
+    </div>
+</header>
+
+
+<section id="gallery" class="gallery section-bg">
+    <div class="container">
+        <div id="sortable_gallery">
+            <ul class="gallery-filter text-center">
+                <li class="current"><a class="btn" href="#" data-filter="*"> All Products</a></li>
+                <li><a class="btn" href="#" data-filter=".wine">Appetizers</a></li>
+                <li><a class="btn" href="#" data-filter=".bbq">Sushi & Sashimi</a></li>
+                <li><a class="btn" href="#" data-filter=".bbq">Entrees</a></li>
+                <li><a class="btn" href="#" data-filter=".bbq">Makimono</a></li>
+                <li><a class="btn" href="#" data-filter=".other">Others</a></li>
+            </ul>
+
+            <div class="row">
+                <div class="col-md-12 gallery-items p-l-0 p-r-0">
+                    <div class="item bbq">
+                        <img class="img-responsive" src="assets/images/bbq1.jpg">
+                        <div class="image-description">
+                            <h3>food1</h3>
+                        </div>
+                    </div>
+                    <div class="item other">
+                        <img class="img-responsive" src="assets/images/other1.jpg">
+                        <div class="image-description">
+                            <h3>food2</h3>
+                        </div>
+                    </div>
+                    <div class="item wine">
+                        <img class="img-responsive" src="assets/images/wine1.jpg">
+                        <div class="image-description">
+                            <h3>food3</h3>
+                        </div>
+                    </div>
+                    <div class="item bbq">
+                        <img class="img-responsive" src="assets/images/bbq2.jpg">
+                        <div class="image-description">
+                            <h3>food4</h3>
+                        </div>
+                    </div>
+                    <div class="item wine">
+                        <img class="img-responsive" src="assets/images/wine2.jpg">
+                        <div class="image-description">
+                            <h3>food5</h3>
+                        </div>
+                    </div>
+                    <div class="item other">
+                        <img class="img-responsive" src="assets/images/other2.jpg">
+                        <div class="image-description">
+                            <h3>food6</h3>
+                        </div>
+                    </div>
+                    <div class="item other">
+                        <img class="img-responsive" src="assets/images/other3.jpg">
+                        <div class="image-description">
+                            <h3>food7</h3>
+                        </div>
+                    </div>
+                    <div class="item wine">
+                        <img class="img-responsive" src="assets/images/wine3.jpg">
+                        <div class="image-description">
+                            <h3>Grape Wine</h3>
+                        </div>
+                    </div>
+                    <div class="item bbq">
+                        <img class="img-responsive" src="assets/images/bbq3.jpg">
+                        <div class="image-description">
+                            <h3>food9</h3>
+                        </div>
+                    </div>
+                    <div class="item bbq">
+                        <img class="img-responsive" src="assets/images/bbq4.jpg">
+                        <div class="image-description">
+                            <h3>food10</h3>
+                        </div>
+                    </div>
+                    <div class="item wine">
+                        <img class="img-responsive" src="assets/images/wine4.jpg">
+                        <div class="image-description">
+                            <h3>Classic Wine</h3>
+                        </div>
+                    </div>
+                </div> <!-- /.gallery-items -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section">
+	<div class="container">
+        <div class="contact-social">
+            <div class="row">
+                <div class="col-md-6 share-buttons">
+                    <ul class="social-icons">
+                        <li><p>Follow Us</p></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 link">
+                    <a href="giftcard.html">Send Gift Card</a>
+                    <a href="contact.html">Contact with us</a>
+                </div>
+            </div>                                
+        </div>
+
+        <div class="contact-info">
+            <div class="row text-center">
+                <div class="col-md-6 col-md-offset-3">
+                    <p>493 Bloor Street West,Toronto, Ontario, M5S 1Y2, Canada</p>
+                    <p>NewGeneration@NewGenerationSushi.com</p>
+                    <p>(416)963-8861</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- start: footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <p class="text-center"> &copy; 2019 New Generation Sushi. All Rights Reserved. </p> 
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- end: footer -->
+
+
+
+
+</div><!--/main container-->
+
+
+
+
+<!-- Javascripts  -->
+
+<script src="assets/lib/components-modernizr/modernizr.js"></script>
+<script src="assets/lib/jquery/dist/jquery.js"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="assets/lib/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
+
+
+<script src="assets/lib/isotope/dist/isotope.pkgd.min.js"></script>
+
+
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>
