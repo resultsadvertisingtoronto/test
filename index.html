@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ThemeWagon" />
+    <meta name="Description" content="Rights Non-Profit Template">
+    <meta name="keywords" content="non-profit, child">
+
+    <title>Home | New Generation Sushi</title>
+
+    <!-- favicons
+    ============================================= -->
+
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <!-- StyleSheets -->
+
+    <!-- Twitter Bootstrap -->
+    <link rel="stylesheet" href="assets/lib/bootstrap/dist/css/bootstrap.min.css">
+
+    
+    <!-- Library Stylesheets -->
+    <link rel="stylesheet" href="assets/lib/owlcarousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/lib/owlcarousel/owl-carousel/owl.theme.css">
+
+
+    <!-- Google font Stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Gabriela' rel='stylesheet' type='text/css'> -->
+
+
+    <!-- Icon Stylesheets -->
+    <link rel="stylesheet" href="assets/lib/ionicons/css/ionicons.css">
+    <link rel="stylesheet" href="assets/lib/fontawesome/css/font-awesome.min.css">
+
+
+
+
+
+
+    <!-- Custom Template Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
+ 
+<script> 
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(53.480838,-2.243195),
+            zoom: 17,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.DEFAULT,
+            },
+            disableDoubleClickZoom: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            scaleControl: true,
+            scrollwheel: false,
+            panControl: true,
+            streetViewControl: true,
+            draggable : true,
+            overviewMapControl: true,
+            overviewMapControlOptions: {
+                opened: false,
+            },
+            mapTypeId: google.maps.MapTypeId.TERRAIN,
+            styles: [
+  {
+    "featureType": "landscape",
+    "stylers": [
+      {
+        "hue": "#F1FF00"
+      },
+      {
+        "saturation": -27.4
+      },
+      {
+        "lightness": 9.4
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "stylers": [
+      {
+        "hue": "#0099FF"
+      },
+      {
+        "saturation": -20
+      },
+      {
+        "lightness": 36.4
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "stylers": [
+      {
+        "hue": "#00FF4F"
+      },
+      {
+        "saturation": 0
+      },
+      {
+        "lightness": 0
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "stylers": [
+      {
+        "hue": "#FFB300"
+      },
+      {
+        "saturation": -38
+      },
+      {
+        "lightness": 11.2
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "stylers": [
+      {
+        "hue": "#00B6FF"
+      },
+      {
+        "saturation": 4.2
+      },
+      {
+        "lightness": -63.4
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "stylers": [
+      {
+        "hue": "#9FFF00"
+      },
+      {
+        "saturation": 0
+      },
+      {
+        "lightness": 0
+      },
+      {
+        "gamma": 1
+      }
+    ]
+  }
+],
+        }
+        var mapElement = document.getElementById('map-canvas');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+['Bistro', 'undefined', 'undefined', 'undefined', 'undefined', 53.4807593, -2.2426305000000184, 'https://mapbuildr.com/assets/img/markers/solid-pin-red.png']
+        ];
+        for (i = 0; i < locations.length; i++) {
+      if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+      if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+      if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+           if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+           if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+            marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+            });
+link = '';     }
+
+}
+</script>
+<style>
+    .gm-style-iw * {
+        display: block;
+        width: 100%;
+    }
+    .gm-style-iw h4, .gm-style-iw p {
+        margin: 0;
+        padding: 0;
+    }
+    .gm-style-iw a {
+        color: #4272db;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- main container -->
+<!--div class="body-content">
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+<!-- Fixed Top Navigation -->
+<nav id="fixedTopNav" class="navbar navbar-fixed-top main-navigation" role="navigation">
+    <div class="container">
+
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="ion-drag"></span>
+            </button>
+
+            <!-- Logo -->
+            <div class="navbar-brand">
+                <span class="sr-only">New Generation Sushi</span>
+                <a href="index.html">
+                    New Generation Sushi
+                </a>
+            </div>
+            <!-- /Logo -->
+
+        </div><!-- /.navbar-header -->
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+            <ul class="nav navbar-nav navbar-right" role="menu">
+
+                <li class="active">
+                    <a href="index.html"><span>Home</span></a>
+                </li>
+
+                <li class="">
+                    <a href="menu.html"><span>Menu</span></a>
+                </li>
+
+                <li class="">
+                    <a href="gallery.html"><span>Gallery</span></a>
+                </li>
+
+                <li class="">
+                    <a href="giftcard.html"><span>Giftcard</span></a>
+                </li>
+
+
+                <li class="">
+                    <a href="contact.html"><span>Contact</span></a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /Navigation Links -->
+
+    </div><!-- /.container -->
+</nav>
+<!-- /Fixed Top Navigation -->
+
+
+<!-- Header -->
+    <header id="header" class="site-header header-fullscreen wrapper-table">
+        <div style="background-image: url(assets/images/heading1.jpg);" class="overlay-01 parallax-hero bg" data-top="transform: translate3d(0px, 0px, 0px)" data-top-bottom="transform: translate3d(0px, -200px, 0px)" data-anchor-target="#site-header"></div>
+
+        <div class="valign-center">
+            <div class="container">
+
+                <div class="intro text-center">
+                    <h1>New <br><br>Generation <br><br>Sushi</h1>
+                    <p> All-you-can-taste sushi bar </p>
+                    <p> call us: 416-516-8883 </p>
+                    <br>
+                    
+                    <a href="https://www.skipthedishes.com/new-generation-sushi-bloor-street-w" class="btn"> 
+                        Order on SkipTheDishes
+                    </a>
+                    <a href="https://www.doordash.com/store/New-Generation-Sushi-Toronto-485029/?ignore_splash_experience=true&utm_source=gpa-ads&utm_campaign=International_Toronto&gclid=EAIaIQobChMI3YqS5-HS4gIVkUkNCh3KUwxPEBIYASAAEgKgPvD_BwE" class="btn"> 
+                       Order on DOORDASH
+                    </a>
+                </div><!-- /.intro -->
+
+            </div><!-- /.container -->
+        </div><!-- /.header-wrapper-inner -->
+    </header>
+<!-- /Header -->
+
+
+ <!-- start: about section -->
+    <section id="about" class="about">
+        <div class="container-fluid">
+            <div class="row equal_height">
+                <div class="col-md-7 p-l-0 p-r-0 text-center">
+                    <div class="section-bg section_1 m-r-10">
+                        <div class="section-content">
+                            <div class="valign-center">
+                                <div class="content-heading">
+                                    <p> _ est 1971 _ </p>
+                                    <h3>
+                                        This is not a just a piece of meat<br>This is a piece of a Heaven
+                                    </h3>
+                                </div>
+                                <div class="content-details">
+                                    <p>
+                                        Elan en no mies tupa pois ja. Ruostuneen tuhattakin kaljamalla ela eli nae kai. Ai saat tule ne mika ihan elan. Jatkaessa et ajattelin no ai rik kabi bazaar ta ver kkonne teistakin. Pitkana hanella vanhaan en insecx no totinen. Onko eli isa toi tuon jota vaan sen. Ilmestys nyt toivoisi toi vaylalta vedappas kahdella tarvitsi jos.
+                                    </p>
+
+                                    <img class="img-responsive center-block" src="assets/images/signature.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- /.section-content -->
+                </div>
+                <div class="col-md-5 p-l-0 p-r-0 section_2">
+                    <img class="img-responsive about-featured" src="assets/images/about_1.jpg">
+                </div>
+            </div>
+        </div>
+    </section> <!-- /#about -->
+
+<!-- end: about section -->
+
+
+<!-- start: menu-header section -->
+    <section id="menu-header" class="menu-header">
+        <div class="wrapper">
+            <div class="wrapper-inner">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3 p-l-0 p-r-0">
+                            <h2 class=" text-center text-uppercase">
+                                discover our
+                            </h2>
+                            <span> Menu </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- /#menu-header -->
+<!-- end: menu-header section -->
+
+
+    <!--  start: menu section -->
+    <section class="menu">
+        <div class="container-fluid">
+            <div class="row equal_height">
+                <div class="col-md-5 p-l-0 p-r-0 section_1">
+<div id="foodSlide" class="owl-carousel owl-theme">
+    <div class="item">
+        <img src="assets/images/food1.jpg" class="img-responsive" alt="Food Image">
+    </div>
+
+    <div class="item">
+        <img src="assets/images/food2.jpg" class="img-responsive" alt="Food Image">
+    </div>
+
+    <div class="item">
+        <img src="assets/images/food3.jpg" class="img-responsive" alt="Food Image">
+    </div>
+</div>
+                </div>
+
+                <div class="col-md-7 p-l-0 p-r-0 text-center">
+                    <div class="section-bg section_2 text-center m-l-10">
+                        <div class="section-content">
+                            <div class="valign-center">
+<div class="content-details">
+    <h3 class="menu-title">The Main Act</h3>
+    <p class="menu-subtitle">
+        smoked low and slow over hickory &amp; served with bbq beans, slaw and house pickles add pulled pork or hot links for   &#163;4
+    </p>
+    <div class="menu-details">
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Memphy Meaty Ribs &amp; tips</label>
+            <span>$14.00</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Pulled Pork</label>
+            <span>$12.00</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Half BBQ Chicken</label>
+            <span>$12.00</span>
+        </li>
+    </div>
+    <h3 class="menu-title">Salads</h3>
+    <div class="menu-details">
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>Iceberg Rench Wedge</label>
+            <span>$14.00</span>
+        </li>
+        <li>
+            <div class="dotted-bg"></div>    
+            <label>House Salad</label>
+            <span>$12.00</span>
+        </li>
+    </div>
+    <a href='menu.html' class='btn btn-bottom-line'>view full menu</a>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- start: time section -->
+    <section id="time" class="time">
+        <div class="wrapper">
+            <div class="wrapper-inner">
+                <div class="container-fluid">
+                    <div class="time-ctg text-center">
+                          <div class="time-ctg-1">
+                            <h3>Sun, Tue - Thu</h3>
+                            <h3>Fri - Sat</h3>
+                            <h3>Monday</h3>
+                        </div>
+                        <span>&nbsp</span>
+                        <div class="time-ctg-2">
+                            <h3>11:30 am - 11:00 pm</h3>
+                            <h3>11:30 am - 12:00 pm</h3>
+                            <h3>closed</h3>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- /#time -->
+<!-- end: time section -->
+
+
+ <!-- start: reservation section -->
+    <section id="reservation" class="reservation">
+        <div class="container-fluid">
+            <div class="row equal_height">
+                <div class="col-md-7 p-l-0 p-r-0 text-center">
+                    <div class="section-bg section_1 m-r-10">
+                        <div class="section-content">
+                            <div class="valign-center">
+                                <div class="content-heading">
+                                    <h3 class="title">
+                                        make a
+                                    </h3>
+                                    <span class="subtitle">
+                                        Reservation
+                                    </span>
+                                </div>
+                                <div class="content-details">
+                                    <p>
+                                        Donec non cursus sapien, vel aliquet dui cum sociis natoque penatibus et magnis  dis parturient montes nascetur ridiculus muslorem.
+                                    </p>
+
+
+                                    <!-- reservation form -->
+                                    <form action="php/reservation.php" method="post" id="reservationForm" class="reservation-form">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">
+                                                            <i class="ion-ios-calendar-outline"></i>
+                                                        </div>
+                                                        <input type="date" id="date" name="date" class="form-control" placeholder="dd/mm/yyyy" required="required">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon"><i class="ion-android-time"></i></div>
+                                                        <select name="time" type="text" class="form-control" id="time" required="required">
+                                                            <option>1:30 pm</option>
+                                                            <option>3:00 pm</option>
+                                                            <option>4:30 pm</option>
+                                                            <option>6:00 pm</option>
+                                                            <option>7:30 pm</option>
+                                                        </select>
+                                                    </div>  
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon"><i class="ion-person-stalker"></i></div>
+                                                        <input class="form-control" id="people" type="number" name="people" min="1" max="50" step="1" placeholder="Number of people" required="required">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <input class="form-control" id="email" name="email" placeholder="Email Address" type="email" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 col-md-offset-3">
+                                                <input type="submit" id="rfsubmit" name="submit" class="btn btn-bottom-line btn-reservation" value="find a table">
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div id="reservationFormResponse"></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 section_2 p-l-5">
+                    <div class="row">
+                        <div class="col-xs-6 p-l-0 p-r-0">
+                            <div class="image-gallery">
+                                <img class="img-responsive" src="assets/images/gallery1.jpg">
+                                <div class="view-more">
+                                    <a class="btn btn-bottom-line" href="gallery.html">
+                                        VIEW MORE
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 p-l-0 p-r-0">
+                            <div class="image-gallery">
+                                <img class="img-responsive" src="assets/images/gallery2.jpg">
+                                <div class="view-more">
+                                    <a class="btn btn-bottom-line" href="gallery.html">
+                                        VIEW MORE
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 p-l-0 p-r-0">
+                            <div class="image-gallery">
+                                <img class="img-responsive" src="assets/images/gallery3.jpg">
+                                <div class="view-more hovered">
+                                    <a class="btn btn-bottom-line" href="gallery.html">
+                                        VIEW MORE
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 p-l-0 p-r-0">
+                            <div class="image-gallery">
+                                <img class="img-responsive" src="assets/images/gallery4.jpg">
+                                <div class="view-more">
+                                    <a class="btn btn-bottom-line" href="gallery.html">
+                                        VIEW MORE
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- /#reservation -->
+<!-- end: reservation section -->
+
+
+<section id="g-map" class="g-map">
+    <div class="container-fluid">
+        <div class="google-map">
+            <div class="row">
+                <div class="col-md-12 p-l-0 p-r-0">
+                    <div id="map-canvas"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- /#contact -->
+
+
+<section class="section">
+	<div class="container">
+        <div class="contact-social">
+            <div class="row">
+                <div class="col-md-6 share-buttons">
+                    <ul class="social-icons">
+                        <li><p>Follow Us</p></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 link">
+                    <a href="giftcard.html">Send Gift Card</a>
+                    <a href="contact.html">Contact with us</a>
+                </div>
+            </div>                                
+        </div>
+
+        <div class="contact-info">
+            <div class="row text-center">
+                <div class="col-md-6 col-md-offset-3">
+                    <p>493 Bloor Street West,Toronto, Ontario, M5S 1Y2, Canada</p>
+                    <p>NewGeneration@NewGenerationSushi.com</p>
+                    <p>(416)963-8861</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- start: footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <p class="text-center"> &copy; 2019 New Generation Sushi. All Rights Reserved. </p> 
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- end: footer -->
+
+
+
+
+</div><!--/main container-->
+
+
+
+
+<!-- Javascripts  -->
+
+<script src="assets/lib/components-modernizr/modernizr.js"></script>
+<script src="assets/lib/jquery/dist/jquery.js"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="assets/lib/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
+
+
+
+
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>
